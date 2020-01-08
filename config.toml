@@ -16,40 +16,40 @@ googleAnalytics = ""      # UA-XXXXXXXX-X
 copyright = ""            # default: author.name ↓        # 默认为下面配置的author.name ↓
 
 # language support # en / zh-cn / other... translations present in i18n/
-defaultContentLanguage = "zh-cn"           # Default language to use
-[languages.zh-cn]
-  languageCode = "zh-cn"
+defaultContentLanguage = "en"           # Default language to use
+[languages.en]
+  languageCode = "en"
 
 [author]                  # essential                     # 必需
-  name = "隋鑫"
+  name = "suixin"
 
 [sitemap]                 # essential                     # 必需
-  changefreq = "隋鑫的博客"
+  changefreq = "weekly"
   priority = 0.5
   filename = "sitemap.xml"
 
 [[menu.main]]             # config your menu              # 配置目录
-  name = "主页"
+  name = "This is Home"
   weight = 10
   identifier = "home"
   url = "/"
 [[menu.main]]
-  name = "归档"
+  name = "Archives"
   weight = 20
   identifier = "archives"
   url = "/post/"
 [[menu.main]]
-  name = "标签"
+  name = "Tags"
   weight = 30
   identifier = "tags"
   url = "/tags/"
 [[menu.main]]
-  name = "分类"
+  name = "Categories"
   weight = 40
   identifier = "categories"
   url = "/categories/"
 [[menu.main]]
-  name = "关于"
+  name = "external-link"
   weight = 50
   url = "https://gohugo.io"
 
