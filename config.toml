@@ -21,35 +21,35 @@ defaultContentLanguage = "zh-cn"           # Default language to use
   languageCode = "zh-cn"
 
 [author]                  # essential                     # 必需
-  name = "suixin"
+  name = "隋鑫"
 
 [sitemap]                 # essential                     # 必需
-  changefreq = "weekly"
+  changefreq = "隋鑫的博客"
   priority = 0.5
   filename = "sitemap.xml"
 
 [[menu.main]]             # config your menu              # 配置目录
-  name = "This is Home"
+  name = "主页"
   weight = 10
   identifier = "home"
   url = "/"
 [[menu.main]]
-  name = "Archives"
+  name = "归档"
   weight = 20
   identifier = "archives"
   url = "/post/"
 [[menu.main]]
-  name = "Tags"
+  name = "标签"
   weight = 30
   identifier = "tags"
   url = "/tags/"
 [[menu.main]]
-  name = "Categories"
+  name = "分类"
   weight = 40
   identifier = "categories"
   url = "/categories/"
 [[menu.main]]
-  name = "external-link"
+  name = "关于"
   weight = 50
   url = "https://gohugo.io"
 
