@@ -49,7 +49,7 @@ defaultContentLanguage = "zh-cn"           # Default language to use
   identifier = "categories"
   url = "/categories/"
 [[menu.main]]
-  name = "关于"
+  name = "链接"
   weight = 50
   url = "https://gohugo.io"
 
