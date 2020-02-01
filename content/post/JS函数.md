@@ -303,39 +303,123 @@ Array.from()//可以将伪数组变成数组
     2. 或者 sayHi 函数有可能在另一个文件里。
     3. 而 JS 中 person.sayHi()会隐式地 person 作为 this 传给 sayHi，方便 sayHi 通过 this 获取 person 对应的对象。
 
-- 新手调用法
+  - 新手调用法
+
+  ```
+  person.sayHi()
+  //会自动把person传到函数里，作为this
+  ```
+
+  - 老手调用法
+
+  ```
+  person.sayHi.call(person)
+  //要手动把person传到函数里，作为this
+  ```
+
+  例如：
+
+  ```
+  function add(x,y){
+      return x+y
+  }
+  add.call(undefined,1,2)//3
+  ```
+
+  第一个参数要作为 this，而原函数没有 this，只能用 undefined 占位，null 也可以。
+
+  再如：
+
+  ```
+  Array.prototype.forEach2 = function(fn){
+      for(let i=0;i<this.length;i++){
+          fn(this[i],i)
+      }
+  }
+  //因为使用forEach2时总会用arr.forEach2,所以arr就被自动传给了forEach2
+
+  array.forEach2.call(array,(item)=>console.log(item))
+  //1,2,3
+  array.forEach2.call({0:'a',length： 1 },(item)=>console.log(item))
+  //this不一定是数组
+  ```
+
+  - this 的两种使用方法
+
+  1. 隐式传递
+
+  ```
+  fn(1,2)
+  obj.child.fn(1)
+  ```
+
+  2. 显示传递
+
+  ```
+  fn.call(undefined,1,2)或fn.apply(undefined,[1,2])
+  //使用apply需要在参数上加中括号[](需要数组形式)
+  obj.child.fn.call(obj.child,1)
+  ```
+
+  - 绑定 this
+
+  1. 使用.bind 可以让 this 不被改变
+
+  ```
+  function f1(p1,p2){
+          console.log(this,p1,p2)
+      }
+      let f2 = f1.bind({name:'frank'})
+      //f2就是f1绑定了this之后的函数
+      f2()
+      //等价于f1.call({name:'frank'})
+  ```
+
+  2. .bind 还可以绑定其他参数
+
+  ```
+   let f3 = f1.bind({name:'frank'}，'hi')
+   f3()//等价于f1.call({name:'frank'},'hi')
+  ```
+
+- 箭头函数（没有 this 和 arguments）
 
 ```
-person.sayHi()
-//会自动把person传到函数里，作为this
+console.log(this)
+//window
+let a = () => console.log(this)
+//箭头函数的this就是外部window的this，一个普通的变量
+a.call(1)//箭头函数的this不能指定，还是外部的this，除非外部this改变
 ```
 
-- 老手调用法
+- 立即执行函数（现在用的很少）
+
+获取局部变量，使用（）立即执行，只需要在匿名函数前加个运算符即可，推荐感叹号！
 
 ```
-person.sayHi.call(person)
-//要手动把person传到函数里，作为this
+! function (){
+    var a =2
+    console.log(a)
+} ()//2，+，—可以，1* 也可以，只要加个运算
 ```
 
-例如：
+新版 JS 只需要 let 外加{ }即可
 
 ```
-function add(x,y){
-    return x+y
-}
-add.call(undefined,1,2)//3
+{
+    let a = 2
+    console.log(2)
+}//2
 ```
 
-第一个参数要作为 this，而原函数没有 this，只能用 undefined 占位，null 也可以。
+## Note:
 
-再如：
-
-```
-Array.prototype.forEach2 = function(){
-    console.log(this)
-}
-
+function 外有（）时，才会用；分隔开，也是唯一需要加分号的地方。
 
 ```
-
-未完！
+console.log('hi');
+(function (){
+    var a =2
+    console.log(a)
+} ())
+```
