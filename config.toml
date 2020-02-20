@@ -20,17 +20,17 @@ disqusShortname = ""                 # your discuss shortname
   name = "首页"
   weight = 10
   identifier = "home"
-  url = "/"
+  url = "https://suixin.monster"
 [[menu.main]]
   name = "归档"
   weight = 20
   identifier = "archive"
-  url = "/post/"
+  url = "https://suixin.monster/post/"
 [[menu.main]]
   name = "标签"
   weight = 30
   identifier = "tags"
-  url = "/tags/"
+  url = "https://suixin.monster/tags/"
 [[menu.main]]
   name = "关于"
   weight = 40
