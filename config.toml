@@ -1,4 +1,4 @@
-baseURL = "https://suixin.monster/"
+baseURL = "https://example.com"
 languageCode = "zh-cn"
 defaultContentLanguage = "zh-cn"
 title = "隋鑫的博客"                    # site title  # 网站标题
