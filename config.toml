@@ -1,17 +1,17 @@
 baseURL = "https://example.com"
 languageCode = "zh-cn"
 defaultContentLanguage = "zh-cn"
-title = "隋鑫的博客"                    # site title  # 网站标题
+title = "无尽光芒"                    # site title  # 网站标题
 theme = "zozo"
 hasCJKLanguage = true                # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
 summaryLength = 100
-paginate = 5                        # shows the number of articles  # 首页显示文章数量
+paginate = 4                         # shows the number of articles  # 首页显示文章数量
 enableEmoji = true
 googleAnalytics = ""                 # your google analytics id
 disqusShortname = ""                 # your discuss shortname
 
 [author]                             # essential                     # 必需
-  name = "suixin"
+  name = "Zeuk"
 
 [blackfriday]
   smartypants = false
@@ -20,17 +20,17 @@ disqusShortname = ""                 # your discuss shortname
   name = "首页"
   weight = 10
   identifier = "home"
-  url = "https://suixin.monster"
+  url = "/"
 [[menu.main]]
   name = "归档"
   weight = 20
   identifier = "archive"
-  url = "https://suixin.monster/post/"
+  url = "/posts/"
 [[menu.main]]
   name = "标签"
   weight = 30
   identifier = "tags"
-  url = "https://suixin.monster/tags/"
+  url = "/tags/"
 [[menu.main]]
   name = "关于"
   weight = 40
@@ -39,7 +39,7 @@ disqusShortname = ""                 # your discuss shortname
 
 [params]
   subTitle = "the site subtitle"                                       # site's subTitle  # 网站二级标题
-  footerSlogan = "隋鑫的精神家园"                                          # site's footer slogan  # 网站页脚标语
+  footerSlogan = "我的精神家园"                                          # site's footer slogan  # 网站页脚标语
   keywords = ["Hugo", "theme","zozo"]                                  # site's keywords  # 网站关键字
   description = "Hugo theme zozo example site."                        # site's description  # 网站描述
 
@@ -59,8 +59,8 @@ disqusShortname = ""                 # your discuss shortname
   visitor = true
 
 [social]
-    email = "mailto:573505403@email.com"
-    twitter = "https://twitter.com/VFU5u5Zlqsddd97"
-    github = "https://github.com/Suizhazha"
-   zhihu = "https://www.zhihu.com/people/sui-xin-28-89"
-    instagram = "https://www.instagram.com/mr_suixin/"
+  github = " "
+  twitter = " "
+  facebook = " "
+  weibo = " "
+  instagram = " "
