@@ -51,7 +51,9 @@ disqusShortname = ""                 # your discuss shortname
 # Valine.
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://valine.js.org
+
 [params.valine]
+
   enable = false
   appId = ""
   appKey = ""
@@ -59,6 +61,7 @@ disqusShortname = ""                 # your discuss shortname
   visitor = true
 
 [social]
+
   github = " "
   twitter = " "
   facebook = " "
